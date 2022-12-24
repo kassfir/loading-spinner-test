@@ -1,5 +1,6 @@
-import './LoadingSpinner.css';
+import './SuccessMark.css';
 
+// Based on this codepen
 
 function SuccessMark ({isActive}) {
 
