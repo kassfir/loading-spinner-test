@@ -44,7 +44,8 @@ function App() {
       </button>
       
       <SuccessMark isVisible={isCheckmarkVisible} />
-      <SuccessScreen isVisible={isOverlayVisible} children={successMessage()}/>
+      <SuccessScreen 
+        isVisible={isOverlayVisible} children={successMessage()} timeout={5000}/>
     </>
   )
 }
