@@ -7,24 +7,24 @@ function SuccessScreen ({isVisible, children, timeout}) {
     let timeoutFunction;
 
     useEffect(() => {
+        clearTimeout(timeoutFunction);
+
         if (timeout > 0 && isVisible){
-
-            if (timeoutFunction) {
-                clearTimeout(timeoutFunction);
-            }
-
             timeoutFunction = setTimeout(() => {
-                console.log(timeoutFunction);
                 setLocalIsVisible(false);
             }, timeout);
         }
 
         setLocalIsVisible(isVisible);
 
+
     }, [isVisible])
     
     return (
-      <div className={`success-screen-overlay ${localIsVisible ? 'success-screen-overlay__visible' : 'success-screen-overlay__invisible'}`}>
+      <div className={`
+            success-screen-overlay 
+            ${localIsVisible ? 'success-screen-overlay__visible' : 'success-screen-overlay__invisible'}
+        `}>
         <main className='success-screen-content'>
             {children}
         </main>

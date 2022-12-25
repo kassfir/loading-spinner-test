@@ -43,3 +43,12 @@ footer, header, hgroup, menu, nav, section {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+/* https://stackoverflow.com/questions/27938900/how-to-prevent-a-css-keyframe-animation-from-running-on-page-load */
+body.preload .success-screen-overlay,
+body.preload .icon--order-success svg path, 
+body.preload .icon--order-success svg circle {
+  animation-duration: 0s !important;
+  -webkit-animation-duration: 0s !important;
+  transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;
+}

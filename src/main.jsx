@@ -8,3 +8,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+
+setTimeout(function(){
+  document.body.className="";
+}, 500);
