@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './App.css'
-import {SuccessMark} from './components/SuccessMark'
+import {
+  SuccessMark,
+} from './components/SuccessMark'
 
 function App() {
   const [isActive, setIsActive] = useState(true);
@@ -12,7 +14,7 @@ function App() {
           event.preventDefault();
           setIsActive(!isActive);
         }}>
-          {isActive ? 'Show button' : 'Hide button'}
+          {isActive ? 'Hide checkmark' : 'Show checkmark'}
       </button>
       <SuccessMark isActive={isActive} />
     </>
